@@ -40,18 +40,18 @@ folder named after the database.
 
 1.  **Clone the repository**:
 
-        shCopy codegit clone https://github.com/yourusername/database-query-generator.git
+        git clone https://github.com/kishandhola/database-query-generator.git
         cd database-query-generator
 
 2.  **Install the required packages**:
 
-        shCopy codepip install mysql-connector-python
+        pip install mysql-connector-python
 
 ## Usage
 
 1.  **Run the script**:
 
-        shCopy codepython generate_queries.py
+        python generate_queries.py
 
 2.  **Provide the required database credentials** when prompted:
 
@@ -241,11 +241,3 @@ For the `orders` table, the generated queries would look like this:
 
 This project is licensed under the MIT License. See the LICENSE file for
 more details.
-
-------------------------------------------------------------------------
-
-This `README.md` file provides comprehensive documentation for the
-Database Query Generator script. It explains the features, requirements,
-installation steps, usage instructions, and the functionality of each
-component in the script. It also includes examples to illustrate how the
-generated queries look for specific tables in a sample database.
