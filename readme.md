@@ -67,7 +67,7 @@ folder named after the database.
 
 ### create_folder_if_not_exists
 
-    pythonCopy codedef create_folder_if_not_exists(folder_path):
+    def create_folder_if_not_exists(folder_path):
         """
         Create a folder if it does not exist.
 
@@ -85,7 +85,7 @@ folder does not exist, it creates it.
 
 ### requires_quotes
 
-    pythonCopy codedef requires_quotes(data_type):
+    def requires_quotes(data_type):
         """
         Check if a given data type requires quotes.
 
@@ -119,7 +119,7 @@ quotes, while numeric types like `int` and `float` do not.
 
 ### get_primary_key
 
-    pythonCopy codedef get_primary_key(table_name):
+    def get_primary_key(table_name):
         """
         Get the primary key of a table.
 
@@ -144,29 +144,29 @@ metadata about the columns, and generates the following SQL queries:
 
 -   **INSERT Query**:
 
-        sqlCopy codeINSERT INTO table_name (column1, column2, ...) VALUES (${column1}, ${column2}, ...);
+        INSERT INTO table_name (column1, column2, ...) VALUES (${column1}, ${column2}, ...);
 
 -   **UPDATE Query**:
 
-        sqlCopy codeUPDATE table_name SET column1 = ${column1}, column2 = ${column2}, ... WHERE primary_key = ${primary_key};
+        UPDATE table_name SET column1 = ${column1}, column2 = ${column2}, ... WHERE primary_key = ${primary_key};
 
 -   **DELETE Query**:
 
-        sqlCopy codeDELETE FROM table_name WHERE primary_key = ${primary_key};
+        DELETE FROM table_name WHERE primary_key = ${primary_key};
 
 -   **SELECT All Fields Query**:
 
-        sqlCopy codeSELECT * FROM table_name WHERE primary_key = ${primary_key};
+        SELECT * FROM table_name WHERE primary_key = ${primary_key};
 
 -   **SELECT Specific Fields Query**:
 
-        sqlCopy codeSELECT column1, column2, ... FROM table_name WHERE primary_key = ${primary_key};
+        SELECT column1, column2, ... FROM table_name WHERE primary_key = ${primary_key};
 
 ## File Structure
 
 The generated files will be organized in the following structure:
 
-    graphqlCopy codedatabase-query-generator/
+    database-query-generator/
     ├── database_name/
     │   ├── table1.txt
     │   ├── table2.txt
@@ -203,7 +203,7 @@ For the `users` table, the generated queries would look like this:
 
 **`example_db/users.txt`**:
 
-    sqlCopy codeInsert Query
+    Insert Query
     INSERT INTO users (id, name, email) VALUES (${id}, '${name}', '${email}');
 
     Update Query
@@ -222,7 +222,7 @@ For the `orders` table, the generated queries would look like this:
 
 **`example_db/orders.txt`**:
 
-    sqlCopy codeInsert Query
+    Insert Query
     INSERT INTO orders (order_id, user_id, amount) VALUES (${order_id}, ${user_id}, ${amount});
 
     Update Query
