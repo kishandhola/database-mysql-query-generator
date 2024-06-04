@@ -51,7 +51,7 @@ folder named after the database.
 
 1.  **Run the script**:
 
-        python generate_queries.py
+        python generate_sql_queries.py
 
 2.  **Provide the required database credentials** when prompted:
 
