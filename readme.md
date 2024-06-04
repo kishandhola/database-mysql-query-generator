@@ -40,8 +40,8 @@ folder named after the database.
 
 1.  **Clone the repository**:
 
-        git clone https://github.com/kishandhola/database-query-generator.git
-        cd database-query-generator
+        git clone https://github.com/kishandhola/database-mysql-query-generator.git
+        cd database-mysql-query-generator
 
 2.  **Install the required packages**:
 
